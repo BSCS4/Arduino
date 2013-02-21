@@ -8,7 +8,7 @@ void setup() {
 
 void loop() {
 
-  Servo24 controller;
+	Servo24 controller;
 
 	//set the No.1 servo motor to 0 degree.
 	controller.set(1, 0);
@@ -25,5 +25,5 @@ void loop() {
 	controller.set(24, 180);
 	//execute the command set(with 2 commands) in 200 micro-second.
 	controller.exec(200);
-  delay(1000);
+	delay(1000);
 }
