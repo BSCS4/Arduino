@@ -6,8 +6,9 @@ Library for www.diy-bot.net 24 channals servo motor controller
 #define SERVO_24
 
 #include <Arduino.h>
+#include "ServoController.h"
 
-class Servo24 {
+class Servo24 : public ServoController {
 String serialCmd;
 public:
 
