@@ -2,6 +2,9 @@
 Library for www.diy-bot.net 24 channals servo motor controller 
 */
 
+#ifndef SERVO_24
+#define SERVO_24
+
 #include <Arduino.h>
 
 class Servo24 {
@@ -25,4 +28,6 @@ public:
   */
   int exec(int msec);
 };
+
+#endif
 

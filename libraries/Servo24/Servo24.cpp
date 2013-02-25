@@ -20,6 +20,9 @@ int Servo24::set(int channel, int degree) {
 }
 
 int Servo24::exec(int msec) {
+	if(serialCmd.length() == 0)
+		return 0;
+
   if(!Serial) {
     serialCmd = "";
     return -1;
