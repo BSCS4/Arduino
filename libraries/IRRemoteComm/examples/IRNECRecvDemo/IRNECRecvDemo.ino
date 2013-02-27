@@ -6,11 +6,12 @@
  * http://arcfn.com
  */
 
-#include "IRRemoteRecv.h"
+#include "IRRemoteNECRecv.h"
+#include <IRremote.h>
 
 int RECV_PIN = 11;
 
-IRRemoteRecv recv(RECV_PIN);
+IRRemoteNECRecv recv(RECV_PIN);
 
 void setup()
 {
@@ -19,8 +20,14 @@ void setup()
 }
 
 void loop() {
-  long r = irecv.read();
-  if(r != 0) {
-    Serial.println(r, HEX);
+  long r ;
+  if(recv.read(&r)) {
+    Serial.print(r,  HEX);
+    if(recv.isRepeat()) {
+      Serial.println(" repeated");
+    }
+    else {
+      Serial.println(" pressed");
+    }
   }
 }
