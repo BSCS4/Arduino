@@ -1,7 +1,7 @@
 #ifndef IR_REMOTE_RECV_H
 #define IR_REMOTE_RECV_H 1
 
-#include <IRremote.h>
+#include "../IRremote/IRremote.h"
 
 class IRRemoteRecv {
 protected:

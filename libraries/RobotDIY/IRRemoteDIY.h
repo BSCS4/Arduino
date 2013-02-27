@@ -2,8 +2,8 @@
 #define IR_REMOTE_DIY_H 1
 
 #include <Arduino.h>
-#include <../IRRemoteComm/IRRemoteRecv.h>
-#include <../IRRemoteComm/IRRemoteNECRecv.h>
+#include "../IRRemoteComm/IRRemoteRecv.h"
+#include "../IRRemoteComm/IRRemoteNECRecv.h"
 
 class IRRemoteDIY : public IRRemoteNECRecv {
 public:
@@ -28,6 +28,8 @@ public:
   static const long KEY_8 = 18;
   static const long KEY_9 = 19;
   static const long KEY_POWER = 20;
+
+  IRRemoteDIY(int pin) : IRRemoteNECRecv(pin) { }
 
 protected:
   virtual long map(long code);
