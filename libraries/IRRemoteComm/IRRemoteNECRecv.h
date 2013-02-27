@@ -1,7 +1,7 @@
 #ifndef IR_REMOTE_NEC_RECV_H
 #define IR_REMOTE_NEC_RECV_H 1
 
-#include "IRRemoteRecv.h"
+#include <IRRemoteRecv.h>
 
 class IRRemoteNECRecv : public IRRemoteRecv {
 

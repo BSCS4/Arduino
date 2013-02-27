@@ -3,9 +3,7 @@ Library for servo motor controller
 */
 
 #ifndef SERVO_CONTROLLER
-#define SERVO_CONTROLLER
-
-#include <Arduino.h>
+#define SERVO_CONTROLLER 1
 
 class ServoController {
 public:
