@@ -10,6 +10,11 @@ typedef struct Motion6_t {
 
 class GyroMotion6: public Gyro {
 public:
+  /**
+  Read 6 axis motion data.
+  @param m6 6 axis motion data (ax, ay, az, gx, gy, gz).
+  @return false for failed, true for okay.
+  */
   virtual bool readMotion6(Motion6T& m6);
 };
 
